@@ -94,6 +94,10 @@ pkill hugo
 
 The PDF is available in the `public` directory.
 
+## EPUB
+
+Epub is built using `hugo`.
+
 ## Translations 
 
 Translations are maintained through [weblate](hosted.weblate.org)
