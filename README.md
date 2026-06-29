@@ -42,7 +42,7 @@ Instead of yarn install you can use `npm install`.
 
 ### Updating
 
-If you have the repo cloned but need to update things, it helps to make sure everything is up to date (since we are also using a submodule for the base theme).
+If you have the repo cloned but need to update things, it helps to make sure everything is up to date.
 
 As normal, from the project root directory, update things like normal:
 ```
@@ -52,9 +52,9 @@ git pull
 And finally make sure the assets are built:
 ```
 cd themes/hugo-darktable-docs-theme/assets/
-yarn install (or alternatively `npm install`).
+yarn install.
 ```
-This should get things up and running.
+This should get things up and running. Instead of `yarn` you can also use `npm install`. 
 
 
 ### Building
@@ -93,3 +93,7 @@ pkill hugo
 ```
 
 The PDF is available in the `public` directory.
+
+## Translations 
+
+Translations are maintained through [weblate](hosted.weblate.org)
