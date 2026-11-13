@@ -1,18 +1,48 @@
 // Variables are taken from bootstrap's _variables.scss file
 
 // Color system
+//
+// darktable's UI is built on strictly neutral greys, so the bootstrap
+// grey ramp (which is slightly blue) is replaced by a neutral one.
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$white:    #fff;
+$gray-100: #fcfcfc;
+$gray-200: #eeeeee;
+$gray-300: #dcdcdc;
+$gray-400: #c8c8c8;
+$gray-500: #9a9a9a;
+$gray-600: #6e6e6e;
+$gray-700: #4a4a4a;
+$gray-800: #2b2b2b;
+$gray-900: #1e1e1e;
+$black:    #000;
 
+$body-bg:          $gray-200;
+$body-color:       $gray-800;
+// dark end of the blue gradient in the darktable logo
+$link-color:       #143e9a;
+$link-hover-color: #1476e6;
+$code-color:       $gray-900;
 
-$code-color: $black;
+$font-family-sans-serif: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace:  'Fira Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+// Theme specific variables
+
+$dt-header-bg:      $gray-800;
+// header (3.5rem) + spectrum bar (0.25rem); app.js keeps --dt-header-h in
+// sync with the real height (e.g. when the search field is opened on a phone)
+$dt-header-height:  var(--dt-header-h, 3.75rem);
+$dt-panel-bg:       $gray-200; // navigation and "on this page" columns
+$dt-panel-border:   $gray-400;
+$dt-panel-active:   #d8d8d8;
+$dt-content-bg:     $gray-100;
+$dt-layout-width:   1440px;    // maximum width of the three columns
+$dt-reading-width:  46rem;     // maximum width of the text column
+$dt-nav-width:      17.5rem;
+$dt-toc-width:      15rem;
+
+// The six colors of the darktable logo, in spectral order.
+// Also listed in layouts/partials/section-colors.html, which derives the
+// color labels of the top-level sections from them.
+$dt-logo-colors: (#d70016, #ff7004, #f7f10e, #17b414, #1476e6, #d000d0);

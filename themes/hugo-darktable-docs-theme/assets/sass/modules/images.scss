@@ -35,3 +35,11 @@ img {
 .w100 {
     width: 100%;
 }
+
+// The logo on the home page has a white wordmark: give it a dark backdrop.
+.dt-home img[src*="darktable-logo"] {
+    box-sizing: content-box;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.375rem;
+    background-color: $dt-header-bg;
+}

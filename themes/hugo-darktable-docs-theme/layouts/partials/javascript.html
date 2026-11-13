@@ -8,10 +8,12 @@
 {{ $javascript := slice $jquery | resources.Concat "/js/jquery.js" }}
 <script src="{{ $javascript.RelPermalink }}"></script>
 
-{{- $popper := resources.Get "/node_modules/popper.js/dist/popper.js" -}}
+{{- /* UMD build: defines the global "Popper" that bootstrap's dropdowns need
+       outside of a .navbar (the ES module build does not) */ -}}
+{{- $popper := resources.Get "/node_modules/popper.js/dist/umd/popper.js" -}}
 
 {{ $javascript := slice $popper | resources.Concat "/js/popper.js" }}
-<script src="{{ $javascript.RelPermalink }}" type="module"></script>
+<script src="{{ $javascript.RelPermalink }}"></script>
 
 {{- $bootstrap := resources.Get "/node_modules/bootstrap/dist/js/bootstrap.js" -}}
 

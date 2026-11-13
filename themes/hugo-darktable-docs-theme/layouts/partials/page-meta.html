@@ -1,0 +1,15 @@
+{{- /* Links below the page content: edit / translate / download. */ -}}
+<div class="dt-page-meta">
+    {{- if eq .Lang site.Sites.Default.Language.Lang -}}
+        {{- with site.Params.editURL -}}
+            {{- with $.File }}
+    <a href="{{ $.Site.Params.editURL }}{{ .Path }}">{{ i18n "edit-this-page" | default "Edit this page on GitHub" }}</a>
+            {{- end -}}
+        {{- end -}}
+    {{- else -}}
+        {{- with site.Params.weblateURL }}
+    <a href="{{ printf . $.Lang }}">{{ i18n "translate-this-page" | default "Translate on Weblate" }}</a>
+        {{- end -}}
+    {{- end }}
+    <a href="{{ "darktable_user_manual.pdf" | relLangURL }}">{{ i18n "download-pdf" | default "Download manual (PDF)" }}</a>
+</div>
