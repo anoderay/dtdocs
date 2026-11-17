@@ -59,6 +59,19 @@
 	    text-decoration: none;
 	}
     }
+
+    // Headings may contain inline markup (`code`, **bold**, *italic*),
+    // which Hugo carries into the table of contents. In the TOC these are
+    // just navigation labels, so strip all of that styling and render the
+    // text plainly, inheriting the link's font and color.
+    code, kbd, strong, em, b, i {
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+	font: inherit;
+	color: inherit;
+    }
 }
 
 // Right-hand column: one vertical line for all levels. The levels are
